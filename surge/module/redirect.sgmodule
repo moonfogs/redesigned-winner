@@ -1,0 +1,9 @@
+#!name=重定向
+#!desc=重定向一些域名以获得更好的体验
+
+[URL Rewrite]
+^https?:\/\/raw\.githubusercontent\.com\/(.*)$ https://raw.kkgithub.com/$1 302
+^https?:\/\/(www\.)?(google\.cn|google\.com\.hk)\/(.*)$ https://www.google.com/$1 302
+
+[MITM]
+hostname = %APPEND% raw.githubusercontent.com, google.cn, google.com.hk
