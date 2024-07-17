@@ -3,7 +3,7 @@
 
 [URL Rewrite]
 ^https?:\/\/raw\.githubusercontent\.com\/(.*)$ https://raw.kkgithub.com/$1 302
-^https?:\/\/(www\.)?(google\.cn|google\.com\.hk)\/(.*)$ https://www.google.com/$1 302
+^https?:\/\/(www\.)?(google\.cn|google\.com\.hk)\/(.*)$ https://www.google.com/$3 302
 
 [MITM]
 hostname = %APPEND% raw.githubusercontent.com, google.cn, google.com.hk
