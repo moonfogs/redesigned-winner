@@ -107,7 +107,7 @@ DOMAIN,httpdns.alicdn.com,REJECT
 # 阿里云
 DOMAIN,httpdns-api.aliyuncs.com,REJECT
 DOMAIN,httpdns-sc.aliyuncs.com,REJECT
-IP-CIDR,203.107.1.0/24,REJECT,no-resolve
+#IP-CIDR,203.107.1.0/24,REJECT,no-resolve
 # 百度
 DOMAIN,httpdns.baidu.com,REJECT
 DOMAIN,httpsdns.baidu.com,REJECT
