@@ -1,11 +1,9 @@
-#!name=emby-ua
-#!desc=修改emby使用的ua
+#!name=Emby-UA
+#!desc=修改Emby使用的UA
 
 [Header Rewrite]
-http-request ^https?:\/\/embyplus\.org header-del User-Agent
-http-request ^https?:\/\/embyplus\.org header-add User-Agent "infuse-direct"
-http-request ^https?:\/\/1111cuct\.niceduck\.lol header-del User-Agent
-http-request ^https?:\/\/1111cuct\.niceduck\.lol header-add User-Agent "infuse-direct"
+http-request ^https?:\/\/embyplus\.org header-replace User-Agent "infuse-direct"
+http-request ^https?:\/\/1111cuct\.niceduck\.lol header-replace User-Agent "infuse-direct"
 
 [MITM]
 hostname = %APPEND% embyplus.org, 1111cuct.niceduck.lol
