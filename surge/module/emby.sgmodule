@@ -8,4 +8,4 @@ http-request ^https?:\/\/1111cuct\.niceduck\.lol header-del User-Agent
 http-request ^https?:\/\/1111cuct\.niceduck\.lol header-add User-Agent "infuse-direct"
 
 [MITM]
-hostname=%APPEND% embyplus.org, 1111cuct.niceduck.lol
+hostname = %APPEND% embyplus.org, 1111cuct.niceduck.lol
