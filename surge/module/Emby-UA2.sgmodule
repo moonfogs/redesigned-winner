@@ -1,0 +1,10 @@
+#!name=Emby-UA
+#!desc=修改Emby使用的UA
+
+[Script]
+type=http-request, pattern=^https?:\/\/embyplus\.org, script-path=https://github.com/moonfogs/redesigned-winner/raw/main/script/ua.js
+type=http-request, pattern=^https?:\/\/1111cuct\.niceduck\.lol, script-path=https://github.com/moonfogs/redesigned-winner/raw/main/script/ua.js
+type=http-request, pattern=^https?:\/\/hxd\.as174\.com, script-path=https://github.com/moonfogs/redesigned-winner/raw/main/script/ua.js
+
+[MITM]
+hostname = %APPEND% embyplus.org, 1111cuct.niceduck.lol, hxd.as174.com
