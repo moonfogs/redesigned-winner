@@ -1,4 +1,3 @@
-function sendRequestWithCustomUA(url) {
     var xhr = new XMLHttpRequest();
     xhr.open('GET', url, true);
     xhr.setRequestHeader('User-Agent', 'Infuse-Direct');
@@ -8,4 +7,4 @@ function sendRequestWithCustomUA(url) {
         }
     };
     xhr.send();
-}
+    $done(0);
