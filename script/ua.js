@@ -1,18 +1,20 @@
 let headers = $request.headers;
 
-if ('User-Agent' in headers) {
-    headers['User-Agent'] = 'Infuse-Direct';
-}
-if ('user-agent' in headers) {
-    headers['user-agent'] = 'Infuse-Direct';
-}
+const INFUSE_DIRECT = 'Infuse-Direct';
+const VERSION = '7.8';
+
+['User-Agent', 'user-agent'].forEach(key => {
+    if (key in headers) {
+        headers[key] = INFUSE_DIRECT;
+    }
+});
 
 const authHeaderKey = Object.keys(headers).find(key => key.toLowerCase() === 'x-emby-authorization');
 
 if (authHeaderKey) {
     let authHeader = headers[authHeaderKey];
-    authHeader = authHeader.replace(/Client="[^"]*"/, 'Client="Infuse-Direct"');
-    authHeader = authHeader.replace(/Version="[^"]*"/, 'Version="7.8"');
+    authHeader = authHeader.replace(/Client="[^"]*"/, Client="${INFUSE_DIRECT}");
+    authHeader = authHeader.replace(/Version="[^"]*"/, Version="${VERSION}");
     headers[authHeaderKey] = authHeader;
 }
 
