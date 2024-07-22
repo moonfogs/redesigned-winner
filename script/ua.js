@@ -8,9 +8,10 @@ if ('user-agent' in headers) {
 }
 
 if (headers['x-emby-authorization']) {
-    headers['x-emby-authorization'] = headers['x-emby-authorization']
-        .replace('Client="VidHub_iOS"', 'Client="Infuse-Direct"')
-        .replace('Version="1.7.4"', 'Version="7.8"');
+    let authHeader = headers['x-emby-authorization'];
+    authHeader = authHeader.replace(/Client="[^"]*"/, 'Client="Infuse-Direct"');
+    authHeader = authHeader.replace(/Version="[^"]*"/, 'Version="7.8"');
+    headers['x-emby-authorization'] = authHeader;
 }
 
 $done({headers});
