@@ -13,8 +13,8 @@ const authHeaderKey = Object.keys(headers).find(key => key.toLowerCase() === 'x-
 
 if (authHeaderKey) {
     let authHeader = headers[authHeaderKey];
-    authHeader = authHeader.replace(/Client="[^"]*"/, Client="${INFUSE_DIRECT}");
-    authHeader = authHeader.replace(/Version="[^"]*"/, Version="${VERSION}");
+    authHeader = authHeader.replace(/Client="[^"]*"/, 'Client=${INFUSE_DIRECT}');
+    authHeader = authHeader.replace(/Version="[^"]*"/, 'Version=${VERSION}');
     headers[authHeaderKey] = authHeader;
 }
 
