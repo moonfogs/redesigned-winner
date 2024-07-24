@@ -3,8 +3,8 @@
 
 [URL Rewrite]
 ^https?:\/\/raw\.githubusercontent\.com https://raw.kkgithub.com header
-^https?:\/\/(www\.)?(google\.cn|google\.com\.hk) https://www.google.com header
-^https?:\/\/upos-hz-mirrorakam\.akamaized\.net https://upos-sz-mirrorali.bilivideo.com header
+^https?:\/\/(www\.)?(google\.cn|google\.com\.hk) https://www.google.com 302
+^https?:\/\/upos-hz-mirrorakam\.akamaized\.net https://upos-sz-mirrorali.bilivideo.com 302
 
 [MITM]
 hostname = %APPEND% raw.githubusercontent.com, google.cn, google.com.hk, upos-hz-mirrorakam.akamaized.net
