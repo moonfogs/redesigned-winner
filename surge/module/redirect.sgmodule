@@ -2,8 +2,9 @@
 #!desc=重定向一些域名以获得更好的体验
 
 [URL Rewrite]
-^https?:\/\/raw\.githubusercontent\.com\/(.*)$ https://raw.kkgithub.com/$1 header
-^https?:\/\/(www\.)?(google\.cn|google\.com\.hk)\/(.*)$ https://www.google.com/$3 header
+^https?:\/\/raw\.githubusercontent\.com https://raw.kkgithub.com header
+^https?:\/\/(www\.)?(google\.cn|google\.com\.hk) https://www.google.com header
+^https?:\/\/upos-hz-mirrorakam\.akamaized\.net https://upos-sz-mirrorali.bilivideo.com header
 
 [MITM]
-hostname = %APPEND% raw.githubusercontent.com, google.cn, google.com.hk
+hostname = %APPEND% raw.githubusercontent.com, google.cn, google.com.hk, upos-hz-mirrorakam.akamaized.net
