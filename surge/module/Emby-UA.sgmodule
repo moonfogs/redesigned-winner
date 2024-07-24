@@ -2,9 +2,10 @@
 #!desc=修改Emby使用的UA
 
 [Script]
-one = type=http-request, pattern=^https?:\/\/embyplus\.org, script-path=https://github.com/moonfogs/redesigned-winner/raw/main/script/ua.js, engine=jsc
-two = type=http-request, pattern=^https?:\/\/1111cuct\.niceduck\.lol, script-path=https://github.com/moonfogs/redesigned-winner/raw/main/script/ua.js, engine=jsc
-three = type=http-request, pattern=^https?:\/\/hxd\.as174\.com, script-path=https://github.com/moonfogs/redesigned-winner/raw/main/script/ua.js, engine=jsc
+Emby-UA=type=http-request, pattern=^https?:\/\/(emby.)?embyplus\.org, script-path=https://raw.githubusercontent.com/moonfogs/redesigned-winner/main/script/ua.js, engine=jsc
+Emby-UA=type=http-request, pattern=^https:\/\/gd\.9521732\.xyz, script-path=https://raw.githubusercontent.com/moonfogs/redesigned-winner/main/script/ua.js, engine=jsc
+Emby-UA=type=http-request, pattern=^https?:\/\/1111cuct\.niceduck\.lol, script-path=https://raw.githubusercontent.com/moonfogs/redesigned-winner/main/script/ua.js, engine=jsc
+Emby-UA=type=http-request, pattern=^https?:\/\/hxd\.as174\.com, script-path=https://raw.githubusercontent.com/moonfogs/redesigned-winner/main/script/ua.js, engine=jsc
 
 [MITM]
-hostname = %APPEND% embyplus.org, 1111cuct.niceduck.lol, hxd.as174.com
+hostname = %APPEND% embyplus.org, emby.embyplus.org, gd.9521732.xyz, 1111cuct.niceduck.lol, hxd.as174.com
