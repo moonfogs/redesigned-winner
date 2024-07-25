@@ -1,6 +1,6 @@
 let headers = $request.headers;
 
-['User-Agent', 'user-agent'].forEach(key => {
+['User-Agent'， 'user-agent'].forEach(key => {
     if (key in headers) {
         headers[key] = "Infuse-Direct/7.8";
     }
