@@ -1,0 +1,11 @@
+#!name=仿Infuse
+#!desc=拙劣的模仿doge
+
+[Script]
+imitating infuse=type=http-request, pattern=^https?:\/\/(emby.)?embyplus\.org, script-path=https://raw.githubusercontent.com/moonfogs/redesigned-winner/main/script/imitating%20infuse.js, engine=jsc
+imitating infuse=type=http-request, pattern=^https:\/\/gd\.9521732\.xyz, script-path=https://raw.githubusercontent.com/moonfogs/redesigned-winner/main/script/imitating%20infuse.js, engine=jsc
+imitating infuse=type=http-request, pattern=^https?:\/\/1111cuct\.niceduck\.lol, script-path=https://raw.githubusercontent.com/moonfogs/redesigned-winner/main/script/imitating%20infuse.js, engine=jsc
+imitating infuse=type=http-request, pattern=^https?:\/\/hxd\.as174\.com, script-path=https://raw.githubusercontent.com/moonfogs/redesigned-winner/main/script/imitating%20infuse.js, engine=jsc
+
+[MITM]
+hostname = %APPEND% embyplus.org, emby.embyplus.org, gd.9521732.xyz, 1111cuct.niceduck.lol, hxd.as174.com
