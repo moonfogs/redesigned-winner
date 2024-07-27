@@ -7,4 +7,4 @@
 ^https?:\/\/upos-hz-mirrorakam\.akamaized\.net https://upos-sz-mirrorali.bilivideo.com 302
 
 [MITM]
-hostname = %APPEND% raw.githubusercontent.com, google.cn, google.com.hk, upos-hz-mirrorakam.akamaized.net
+hostname = %APPEND% raw.githubusercontent.com, www.google.cn, upos-hz-mirrorakam.akamaized.net
