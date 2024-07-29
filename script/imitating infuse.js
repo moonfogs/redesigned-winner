@@ -24,4 +24,4 @@ if (authHeaderKey) {
     headers[authHeaderKey] = authHeader;
 }
 
-$done({ headers });
+$done({headers});
